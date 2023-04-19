@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { LayoutModule } from 'src/modules/layout/layout.module';
 
 import { NewspaperModule } from 'src/modules/newspaper/newspaper.module';
 
