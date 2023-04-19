@@ -9,6 +9,6 @@ import { Component, Input, ViewEncapsulation } from '@angular/core';
 export class LayoutComponent {
 
   @Input()
-  title!:string
+  config!:any
 
 }

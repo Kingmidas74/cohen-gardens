@@ -5,14 +5,42 @@
     justify-content: center;
 }
 
-.date {
-    font-size: .9rem;
-    text-align: center;
-    width: calc(2 * 100vw / 4);
-    margin: auto;
-    margin-top: 10px;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
+.aside {
+    display: flex;
+    flex-direction: row;
+
+    span {
+        font-size: .9rem;
+        text-align: center;
+        margin: auto;
+        margin-top: 10px;
+        border-right: 1px solid black;
+
+        &:nth-child(1) {
+            flex:1;
+
+            @media only screen and (max-width: 1024px) {
+                display: none;
+            }
+        }
+
+        &:nth-child(2) {
+            flex:3;
+            border-right: none;
+
+            @media only screen and (max-width: 1024px) {
+                flex:1
+            }
+        }
+
+        &:nth-child(3) {
+            flex:1;
+
+            @media only screen and (max-width: 1024px) {
+                display: none;
+            }
+        }
+    }
 }
 
 .columns {

@@ -7,7 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   config:any = {
-    title: "Wislemn Daily News"
+    title: "Wislemn Daily News",
+    credo: "Victoria nulla est, Quam quae confessos animo quoque subjugat hostes"
   }
   data:any = {
     articles:[
