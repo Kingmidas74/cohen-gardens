@@ -1,17 +1,22 @@
 .title {
     border-bottom: 3px double black;
-    
+    padding: .4rem;
+
     h1 {
-    font-size: 4.5rem;
-    font-weight: bold;
-    text-align: center;
+        font-size: calc(var(--gap) * 4);
+        font-weight: bold;
+        text-align: center;
+
+        @media only screen and (max-width: 1024px) {
+            font-size: calc(var(--gap) * 3);
+        }
     }
 }
 
 .date {
-    font: 1em "Roboto Mono", monospace;
+    font-size: .9rem;
     text-align: center;
-    width: 280px;
+    width: calc(2 * 100vw / 5);
     margin: auto;
     margin-top: 10px;
     border-left: 1px solid black;
@@ -19,15 +24,24 @@
 }
 
 .columns {
-    display: flex;
-    gap: 1.4rem;
     margin-top: 10px;
     padding-top: 10px;
-    flex-direction: row;
     border-top: 3px double black;
 
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas:
+        "left article article article right";
+    gap: var(--gap);
+
     .notes {
-        flex: 1;
+        &:nth-child(1) {
+            grid-area: left;
+        }
+
+        &:nth-child(2) {
+            grid-area: right;
+        }
 
         .note {
             text-align: justify;
@@ -35,18 +49,30 @@
     }
 
     .article {
-        flex: 3;
+        grid-area: article;
 
         display: flex;
         flex-direction: column;
-        gap:1rem;
+        gap: var(--gap);
         text-align: justify;
 
-        
+
 
         .qoute {
             font-style: italic;
             font-size: 1rem;
+        }
+    }
+
+    @media only screen and (max-width: 1024px) {
+        display: flex;
+
+        .notes {
+            display: none;
+        }
+
+        .article {
+            padding: .4rem;
         }
     }
 }

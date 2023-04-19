@@ -1,14 +1,12 @@
 cg-layout {
     display: block;
     width: 90vw;
-    padding: 2rem;
-    margin: 2rem auto;
-    border-radius: 1rem;
-    background-color: #e6e6e6;
+    padding: calc(var(--gap) * 2);
+    margin: calc(var(--gap) * 2) auto;
+    border-radius: var(--gap);
     box-shadow: 1rem 1rem 0 #ccc;
-    background: #f9f7f1 url("https://assets.codepen.io/618359/halftone_1.png");
+    background: var(--background-color) url("https://assets.codepen.io/618359/halftone_1.png");
 
-    /* Extra small devices (phones, up to 480px) */
     @media only screen and (max-width: 480px) {
         width: 100%;
         box-shadow: none;
@@ -17,7 +15,6 @@ cg-layout {
         padding: 0;
     }
 
-    /* Small devices (tablets, 481px to 768px) */
     @media only screen and (min-width: 481px) and (max-width: 768px) {
         width: 100%;
         box-shadow: none;
@@ -26,7 +23,6 @@ cg-layout {
         padding: 0;
     }
 
-    /* Medium devices (laptops, 769px to 1024px) */
     @media only screen and (min-width: 769px) and (max-width: 1024px) {
         width: 100%;
         box-shadow: none;
