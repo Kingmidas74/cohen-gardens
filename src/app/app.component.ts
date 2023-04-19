@@ -6,5 +6,33 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Cohen gardens';
+  config:any = {
+    title: "Wislemn Daily News"
+  }
+  data:any = {
+    articles:[
+      {
+        title:"Legitimate business",
+        content:"",
+        description:""
+      }
+    ],
+    notes:[
+      {
+        id:1,
+        title:"short 1",
+        description:"lorem ipsum"
+      },
+      {
+        id:2,
+        title:"short 2",
+        description:"lorem ipsum"
+      },
+      {
+        id:3,
+        title:"short 3",
+        description:"lorem ipsum"
+      }
+    ]
+  }
 }

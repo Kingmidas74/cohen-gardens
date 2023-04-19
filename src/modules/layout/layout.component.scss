@@ -1,22 +1,14 @@
 .title {
     border-bottom: 3px double black;
     padding: .4rem;
-
-    h1 {
-        font-size: calc(var(--gap) * 4);
-        font-weight: bold;
-        text-align: center;
-
-        @media only screen and (max-width: 1024px) {
-            font-size: calc(var(--gap) * 3);
-        }
-    }
+    display: flex;
+    justify-content: center;
 }
 
 .date {
     font-size: .9rem;
     text-align: center;
-    width: calc(2 * 100vw / 5);
+    width: calc(2 * 100vw / 4);
     margin: auto;
     margin-top: 10px;
     border-left: 1px solid black;
@@ -42,26 +34,10 @@
         &:nth-child(2) {
             grid-area: right;
         }
-
-        .note {
-            text-align: justify;
-        }
     }
 
     .article {
         grid-area: article;
-
-        display: flex;
-        flex-direction: column;
-        gap: var(--gap);
-        text-align: justify;
-
-
-
-        .qoute {
-            font-style: italic;
-            font-size: 1rem;
-        }
     }
 
     @media only screen and (max-width: 1024px) {
@@ -74,12 +50,5 @@
         .article {
             padding: .4rem;
         }
-    }
-}
-
-footer {
-    &::before {
-        content: "\00a9 ";
-        margin-right: 1rem;
     }
 }

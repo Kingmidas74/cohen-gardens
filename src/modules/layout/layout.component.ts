@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, Input, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'cg-layout',
@@ -7,5 +7,8 @@ import { Component, ViewEncapsulation } from '@angular/core';
   styleUrls: ['./layout.component.scss']
 })
 export class LayoutComponent {
+
+  @Input()
+  title!:string
 
 }

@@ -1,0 +1,13 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+    text-align: justify;
+
+
+
+    .qoute {
+        font-style: italic;
+        font-size: 1rem;
+    }
+}

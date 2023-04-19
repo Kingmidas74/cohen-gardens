@@ -1,34 +1,17 @@
-cg-layout {
+cg-newspaper {
     display: block;
-    width: 90vw;
-    padding: calc(var(--gap) * 2);
-    margin: calc(var(--gap) * 2) auto;
-    border-radius: var(--gap);
-    box-shadow: 1rem 1rem 0 #ccc;
     background: var(--background-color) url("https://assets.codepen.io/618359/halftone_1.png");
+    width: 100%;
+    box-shadow: none;
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
 
-    @media only screen and (max-width: 480px) {
-        width: 100%;
-        box-shadow: none;
-        border-radius: 0;
-        margin: 0;
-        padding: 0;
-    }
-
-    @media only screen and (min-width: 481px) and (max-width: 768px) {
-        width: 100%;
-        box-shadow: none;
-        border-radius: 0;
-        margin: 0;
-        padding: 0;
-    }
-
-    @media only screen and (min-width: 769px) and (max-width: 1024px) {
-        width: 100%;
-        box-shadow: none;
-        border-radius: 0;
-        margin: 0;
-        padding: 0;
+    @media only screen and (min-width: 1024px) {width: 90vw;
+        padding: calc(var(--gap) * 2);
+        margin: calc(var(--gap) * 2) auto;
+        border-radius: var(--gap);
+        box-shadow: 1rem 1rem 0 #ccc;
     }
 
 }
