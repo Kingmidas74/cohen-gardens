@@ -1,1 +1,48 @@
-/* You can add global styles to this file, and also import other style files */
+@import '~normalize.css';
+
+//Variables
+$primary-font:  'Times New Roman', Times, serif;
+$mq: 768px;
+
+//General
+* {
+  box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    min-height: 100vh;
+}
+
+html,
+body {
+  font-family: $primary-font;
+  color: #333;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-size: 1rem; 
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Fondamento", cursive;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+	width: 100%;
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+	image-rendering: pixelated;
+}
