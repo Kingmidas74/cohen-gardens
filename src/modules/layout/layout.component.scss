@@ -1,59 +1,82 @@
 .title {
     border-bottom: 3px double black;
-    
-    h1 {
-    font-size: 4.5rem;
-    font-weight: bold;
-    text-align: center;
+    padding: .4rem;
+    display: flex;
+    justify-content: center;
+}
+
+.aside {
+    display: flex;
+    flex-direction: row;
+
+    span {
+        font-size: .9rem;
+        text-align: center;
+        margin: auto;
+        margin-top: 10px;
+        border-right: 1px solid black;
+
+        &:nth-child(1) {
+            flex:1;
+
+            @media only screen and (max-width: 1024px) {
+                display: none;
+            }
+        }
+
+        &:nth-child(2) {
+            flex:3;
+            border-right: none;
+
+            @media only screen and (max-width: 1024px) {
+                flex:1
+            }
+        }
+
+        &:nth-child(3) {
+            flex:1;
+
+            @media only screen and (max-width: 1024px) {
+                display: none;
+            }
+        }
     }
 }
 
-.date {
-    font: 1em "Roboto Mono", monospace;
-    text-align: center;
-    width: 280px;
-    margin: auto;
-    margin-top: 10px;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
-}
-
 .columns {
-    display: flex;
-    gap: 1.4rem;
     margin-top: 10px;
     padding-top: 10px;
-    flex-direction: row;
     border-top: 3px double black;
 
-    .notes {
-        flex: 1;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas:
+        "left article article article right";
+    gap: var(--gap);
 
-        .note {
-            text-align: justify;
+    .notes {
+        &:nth-child(1) {
+            grid-area: left;
+        }
+
+        &:nth-child(2) {
+            grid-area: right;
         }
     }
 
     .article {
-        flex: 3;
-
-        display: flex;
-        flex-direction: column;
-        gap:1rem;
-        text-align: justify;
-
-        
-
-        .qoute {
-            font-style: italic;
-            font-size: 1rem;
-        }
+        grid-area: article;
     }
-}
 
-footer {
-    &::before {
-        content: "\00a9 ";
-        margin-right: 1rem;
+    @media only screen and (max-width: 1024px) {
+        display: flex;
+
+        .notes {
+            display: none;
+        }
+
+        .article {
+            padding: .4rem;
+        }
     }
 }

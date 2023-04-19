@@ -1,0 +1,9 @@
+h1 {
+    font-size: calc(var(--gap) * 4);
+    font-weight: bold;
+    text-align: center;
+
+    @media only screen and (max-width: 1024px) {
+        font-size: calc(var(--gap) * 2);
+    }
+}

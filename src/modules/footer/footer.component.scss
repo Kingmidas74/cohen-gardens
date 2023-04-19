@@ -1,0 +1,6 @@
+:host{
+    &::before {
+        content: "\00a9 ";
+        margin-right: var(--gap);
+    }
+}

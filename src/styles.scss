@@ -1,26 +1,22 @@
 @import '~normalize.css';
+@import 'app/app.theme.scss';
 
-//Variables
-$primary-font:  'Times New Roman', Times, serif;
-$mq: 768px;
-
-//General
 * {
   box-sizing: border-box;
 }
 
 html {
-    font-size: 16px;
+    font-size: var(--font-size);
     min-height: 100vh;
 }
 
 html,
 body {
-  font-family: $primary-font;
-  color: #333;
+  font-family: var(--font-family);
+  color:var(--text-color);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  font-size: 1rem; 
+  font-size: var(--gap); 
   min-height: 100vh;
 }
 
