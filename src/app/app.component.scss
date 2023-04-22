@@ -7,7 +7,8 @@ cg-newspaper {
     margin: 0;
     padding: 0;
 
-    @media only screen and (min-width: 1024px) {width: 90vw;
+    @media only screen and (min-width: 1024px) {
+        width: 90vw;
         padding: calc(var(--gap) * 2);
         margin: calc(var(--gap) * 2) auto;
         border-radius: var(--gap);

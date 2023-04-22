@@ -1,1 +1,3 @@
-<cg-note></cg-note>
+<ng-template ngFor let-item [ngForOf]="notes" let-i="index">
+    <cg-note *ngIf="(odd && i % 2 === 0) || (!odd && i % 2 !== 0)" [note]="item"></cg-note>  
+</ng-template>
