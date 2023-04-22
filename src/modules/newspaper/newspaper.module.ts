@@ -4,6 +4,7 @@ import { NewspaperComponent } from './newspaper.component';
 import { ArticleModule } from 'src/modules/article/article.module';
 import { LayoutModule } from 'src/modules/layout/layout.module';
 import { NoteModule } from 'src/modules/notes/note.module';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -13,6 +14,7 @@ import { NoteModule } from 'src/modules/notes/note.module';
   ],
   imports: [
     CommonModule,
+    RouterModule,
 
     LayoutModule,
     ArticleModule,
