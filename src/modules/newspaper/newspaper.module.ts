@@ -8,6 +8,7 @@ import { NoteModule } from 'modules/notes/note.module';
 import { NavModule } from 'modules/nav/nav.module';
 
 import { NewspaperComponent } from './newspaper.component';
+import { ArticleContentResolver } from './resolver';
 
 
 
@@ -26,6 +27,9 @@ import { NewspaperComponent } from './newspaper.component';
   ],
   exports: [
     NewspaperComponent
+  ],
+  providers: [
+    ArticleContentResolver
   ]
 })
 export class NewspaperModule { }
