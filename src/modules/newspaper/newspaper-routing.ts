@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { NewspaperComponent } from './newspaper.component';
 import { ArticleComponent } from '../article/article.component';
+import { ArticleContentResolver } from './resolver';
 
 @NgModule({
   imports: [RouterModule.forChild([
@@ -11,7 +12,10 @@ import { ArticleComponent } from '../article/article.component';
           children: [
             {
                 path:':title',
-                component:ArticleComponent
+                component:ArticleComponent,
+                resolve: {
+                  content: ArticleContentResolver,
+                }
             },
             {
                 path:'**',
