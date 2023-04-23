@@ -1,4 +1,5 @@
 <cg-layout [config]="config">
+    <cg-nav nav [notes]="data.notes"></cg-nav>
     <router-outlet></router-outlet>
     <cg-notes left [notes]="data.notes" [odd]="false"></cg-notes>
     <cg-notes right [notes]="data.notes" [odd]="true"></cg-notes>

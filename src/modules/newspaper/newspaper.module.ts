@@ -1,10 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NewspaperComponent } from './newspaper.component';
-import { ArticleModule } from 'src/modules/article/article.module';
-import { LayoutModule } from 'src/modules/layout/layout.module';
-import { NoteModule } from 'src/modules/notes/note.module';
 import { RouterModule } from '@angular/router';
+
+import { ArticleModule } from 'modules/article/article.module';
+import { LayoutModule } from 'modules/layout/layout.module';
+import { NoteModule } from 'modules/notes/note.module';
+import { NavModule } from 'modules/nav/nav.module';
+
+import { NewspaperComponent } from './newspaper.component';
 
 
 
@@ -18,7 +21,8 @@ import { RouterModule } from '@angular/router';
 
     LayoutModule,
     ArticleModule,
-    NoteModule
+    NoteModule,
+    NavModule,
   ],
   exports: [
     NewspaperComponent

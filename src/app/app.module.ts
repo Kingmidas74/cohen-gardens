@@ -5,7 +5,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { NewspaperModule } from 'src/modules/newspaper/newspaper.module';
+import { NewspaperModule } from 'modules/newspaper/newspaper.module';
 
 @NgModule({
   declarations: [

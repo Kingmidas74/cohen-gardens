@@ -1,18 +1,44 @@
-cg-newspaper {
-    display: block;
-    background: var(--background-color) url("https://assets.codepen.io/618359/halftone_1.png");
-    width: 100%;
-    box-shadow: none;
-    border-radius: 0;
-    margin: 0;
-    padding: 0;
+@import "theme";
 
-    @media only screen and (min-width: 1024px) {
-        width: 90vw;
-        padding: calc(var(--gap) * 2);
-        margin: calc(var(--gap) * 2) auto;
-        border-radius: var(--gap);
-        box-shadow: 1rem 1rem 0 #ccc;
+:host {
+    @include flex;
+
+    position: relative;
+    
+    width: 90vw;
+    padding: calc(var(--gap) * 2);
+    margin: calc(var(--gap) * 2) auto;
+    
+
+    background: var(--background-color) url("https://assets.codepen.io/618359/halftone_1.png");
+    border-radius: var(--gap);
+    box-shadow: 1rem 1rem 0 #ccc;
+
+    @include mobile() {
+        @include margin;
+        @include padding;
+        @include mobile-height();
+        width: 100vw;
+        border-radius: 0;
+        box-shadow: none;
     }
 
+    &:before { 
+        position: absolute;
+
+        @include flex($align: flex-end, $justify: flex-end);
+
+        padding-right: var(--gap);
+        padding-bottom: var(--gap);
+        bottom: 0;
+        right: 0;
+
+        content: '\25ba';
+        background: linear-gradient(to right bottom, transparent 50%, var(--background-color) 0) 100% 0 no-repeat;
+        width: calc(var(--gap) * 4);
+        height: calc(var(--gap) * 4);
+        border-bottom-right-radius: var(--gap);
+        cursor: pointer;
+
+    }
 }

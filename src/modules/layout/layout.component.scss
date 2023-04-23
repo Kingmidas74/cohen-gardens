@@ -1,57 +1,74 @@
+@import "theme";
+
+:host {
+    @include mobile() {
+        @include mobile-height();
+        @include flex();
+    }
+}
+
 .title {
+    @include flex($justify: center);
+
     border-bottom: 3px double black;
     padding: .4rem;
-    display: flex;
-    justify-content: center;
 }
 
 .aside {
-    display: flex;
-    flex-direction: row;
+    @include flex($type: row);
 
     span {
-        font-size: .9rem;
+        font-size: .8rem;
         text-align: center;
-        margin: auto;
-        margin-top: 10px;
         border-right: 1px solid black;
 
         &:nth-child(1) {
-            flex:1;
+            flex: 1;
 
-            @media only screen and (max-width: 1024px) {
+            @include mobile() {
                 display: none;
             }
         }
 
         &:nth-child(2) {
-            flex:3;
+            flex: 3;
             border-right: none;
 
-            @media only screen and (max-width: 1024px) {
-                flex:1
+            @include mobile() {
+                flex: 1;
             }
         }
 
         &:nth-child(3) {
-            flex:1;
+            flex: 1;
 
-            @media only screen and (max-width: 1024px) {
+            @include mobile() {
                 display: none;
             }
         }
     }
 }
 
-.columns {
-    margin-top: 10px;
-    padding-top: 10px;
+nav {
+    display: none;
     border-top: 3px double black;
+    border-bottom: 3px double black;
 
+    @include mobile() {
+        @include flex;
+    }
+}
+
+.columns {
+
+    @include mobile() {
+        flex: 1 1 auto;
+    }
+
+    border-top: 3px double black;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-areas:
-        "left article article article right";
+    grid-template-areas: "left article article article right";
     gap: var(--gap);
 
     .notes {
@@ -68,8 +85,10 @@
         grid-area: article;
     }
 
-    @media only screen and (max-width: 1024px) {
-        display: flex;
+    @include mobile() {
+        @include flex();
+        
+        border-top: none;
 
         .notes {
             display: none;

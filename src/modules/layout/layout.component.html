@@ -1,10 +1,12 @@
-<cg-header class="title" [title]="config.title"/>
+<cg-header class="title" [title]="config.title" />
 <aside class="aside">
     <span>Sunday, December 21, 1952</span>
     <span>{{config.credo}}</span>
     <span></span>
 </aside>
-
+<nav>
+    <ng-content select="[nav]"></ng-content>
+</nav>
 <main class="columns">
     <div class="notes">
         <ng-content select="[left]"></ng-content>
@@ -16,4 +18,4 @@
         <ng-content select="[right]"></ng-content>
     </div>
 </main>
-<cg-footer class="footer"/>
+<cg-footer class="footer" />

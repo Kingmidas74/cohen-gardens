@@ -1,6 +1,7 @@
+@import "theme";
+
 :host {
-    display: flex;
+    @include flex;
     gap: var(--gap);
-    flex-direction: column;
     padding: var(--gap);
 }

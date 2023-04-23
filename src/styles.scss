@@ -1,23 +1,31 @@
 @import '~normalize.css';
-@import 'app/app.theme.scss';
+@import 'app/app.theme';
+@import 'theme';
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 html {
     font-size: var(--font-size);
-    min-height: 100vh;
+
+    @include mobile() {
+        @include mobile-height()
+    }
 }
 
 html,
 body {
-  font-family: var(--font-family);
-  color:var(--text-color);
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  font-size: var(--gap); 
-  min-height: 100vh;
+    font-family: var(--font-family);
+    color: var(--text-color);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    font-size: var(--gap);
+    min-height: 100vh;
+
+    @include mobile() {
+        @include mobile-height()
+    }
 }
 
 h1,
@@ -27,18 +35,18 @@ h4,
 h5,
 h6 {
     font-family: "Fondamento", cursive;
-    margin: 0;
-    padding: 0;
+    @include margin;
+    @include padding;
 }
 
 p {
-    margin: 0;
-    padding: 0;
+    @include margin;
+    @include padding;
 }
 
 img {
-	width: 100%;
-	-webkit-filter: grayscale(100%);
-	filter: grayscale(100%);
-	image-rendering: pixelated;
+    width: 100%;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    image-rendering: pixelated;
 }

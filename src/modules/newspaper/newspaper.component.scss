@@ -1,0 +1,8 @@
+@import "theme";
+
+:host {
+    @include flex;
+    @include mobile() {
+        @include mobile-height()
+    }
+}

@@ -1,0 +1,25 @@
+
+@mixin mobile() {
+    @media only screen and (max-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin mobile-height() {
+    min-height: 100vh;
+}
+
+@mixin flex($type: column, $align: stretch, $justify: stretch) {
+    display: flex;
+    flex-direction: $type;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin padding($left: 0, $right: 0, $top: 0, $bottom: 0) {
+    padding: $top $right $bottom $left;
+}
+
+@mixin margin($left: 0, $right: 0, $top: 0, $bottom: 0) {
+    margin: $top $right $bottom $left;
+}
