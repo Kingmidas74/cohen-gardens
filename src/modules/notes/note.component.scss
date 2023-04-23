@@ -1,7 +1,8 @@
+@import "theme";
+
 :host {
-    display: flex;
+    @include flex;
     gap: calc(var(--gap) / 2);
-    flex-direction: column;
 
     outline: none;
     cursor: pointer;

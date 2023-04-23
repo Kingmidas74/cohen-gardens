@@ -1,6 +1,8 @@
+@import 'theme';
+
 div {
-    display: flex;
-    flex-direction: column;
+    @include flex();
+
     gap: var(--gap);
     text-align: justify;
 
