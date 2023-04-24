@@ -1,6 +1,7 @@
-import { Component, Input, ViewEncapsulation } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
+import { ArticleInfo } from 'domain/models';
 import { Observable, map } from 'rxjs';
 
 @Component({
@@ -23,8 +24,10 @@ export class ArticleComponent {
   ngOnInit(): void {
     this.articleContent$ = this.route.data
       .pipe(
-        map(data => data['content']),
-        map(data => this.sanitizer.bypassSecurityTrustHtml(data))
+        map((data) => data['content'] as ArticleInfo),
+        map((articleInfo) =>
+          this.sanitizer.bypassSecurityTrustHtml(articleInfo.Content)
+        )
       );
   }
 }

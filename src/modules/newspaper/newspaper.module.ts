@@ -9,6 +9,7 @@ import { NavModule } from 'modules/nav/nav.module';
 
 import { NewspaperComponent } from './newspaper.component';
 import { ArticleContentResolver } from './resolver';
+import { ServicesModule } from 'services/services.module';
 
 
 
@@ -20,6 +21,8 @@ import { ArticleContentResolver } from './resolver';
     CommonModule,
     RouterModule,
 
+    ServicesModule,
+
     LayoutModule,
     ArticleModule,
     NoteModule,
@@ -29,7 +32,7 @@ import { ArticleContentResolver } from './resolver';
     NewspaperComponent
   ],
   providers: [
-    ArticleContentResolver
+    ArticleContentResolver,
   ]
 })
 export class NewspaperModule { }
